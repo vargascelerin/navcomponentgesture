@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/inicioFragment">
+
+    <fragment
+        android:id="@+id/inicioFragment"
+        android:name="com.example.navigationcomponentchido.InicioFragment"
+        android:label="fragment_inicio"
+        tools:layout="@layout/fragment_inicio" >
+        <action
+            android:id="@+id/action_inicioFragment_to_primerFragmento"
+            app:destination="@id/primerFragmento" />
+        <action
+            android:id="@+id/action_inicioFragment_to_segundoFragmento"
+            app:destination="@id/segundoFragmento" />
+        <action
+            android:id="@+id/action_inicioFragment_to_configurarFragment"
+            app:destination="@id/configurarFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/primerFragmento"
+        android:name="com.example.navigationcomponentchido.primerFragmento"
+        android:label="fragment_primer_fragmento"
+        tools:layout="@layout/fragment_primer_fragmento" >
+        <action
+            android:id="@+id/action_primerFragmento_to_inicioFragment"
+            app:destination="@id/inicioFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/segundoFragmento"
+        android:name="com.example.navigationcomponentchido.segundoFragmento"
+        android:label="fragment_segundo_fragmento"
+        tools:layout="@layout/fragment_segundo_fragmento" >
+        <action
+            android:id="@+id/action_segundoFragmento_to_tercerFragmento"
+            app:destination="@id/tercerFragmento" />
+        <action
+            android:id="@+id/action_segundoFragmento_to_inicioFragment"
+            app:destination="@id/inicioFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tercerFragmento"
+        android:name="com.example.navigationcomponentchido.tercerFragmento"
+        android:label="fragment_tercer_fragmento"
+        tools:layout="@layout/fragment_tercer_fragmento" >
+        <action
+            android:id="@+id/action_tercerFragmento_to_segundoFragmento"
+            app:destination="@id/segundoFragmento" />
+        <action
+            android:id="@+id/action_tercerFragmento_to_inicioFragment"
+            app:destination="@id/inicioFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/configurarFragment"
+        android:name="com.example.navigationcomponentchido.configurarFragment"
+        android:label="fragment_configurar"
+        tools:layout="@layout/fragment_configurar" />
+</navigation>
